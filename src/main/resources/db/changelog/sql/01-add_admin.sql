@@ -1,0 +1,2 @@
+insert into users(created_at, created_by, first_name, last_name, username, password, deleted)
+values(current_timestamp, 1, 'Admin', 'Root', 'admin@gmail.com','$2a$12$M3MR4Hzd9qhszNTv/g5fje0Eji3hVCCYZUnbHrvfFvdHEfvBxJyuO', false);

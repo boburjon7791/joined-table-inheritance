@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: joined-table-inheritance
+  profiles:
+    active: local
+  liquibase:
+    change-log: db/changelog/db.changelog-master.xml
+jwt:
+  access:
+    token:
+      key: A6465486W46546FEHUKnjhguyjhba15364563
+      expiration: 50000000
