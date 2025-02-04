@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "f6066ad0-1e54-422d-85e5-6173b86efe61",
+		"name": "joined_inheritance_table",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26178157"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "role",
+								"value": "SUPER_ADMIN",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"admin@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/auth/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "get account for all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3Mzg2NzYwOTEsImlzcyI6ImpvaW5lZC10YWJsZS1pbmhlcml0YW5jZSIsImV4cCI6MTczODcyNjA5MX0.VFAfHF4Sw0O8fvRHpSAWKFo8H6gpA7sZHrIChXn-FTA"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "role",
+								"value": "SUPER_ADMIN",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8080/api/account"
+					},
+					"response": []
+				},
+				{
+					"name": "update admin account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3Mzc5MTMyNjcsImlzcyI6ImpvaW5lZC10YWJsZS1pbmhlcml0YW5jZSIsImV4cCI6MTczNzk2MzI2N30.mFJYi8IT5db5Sd8YZv3o2fehSJ6niaemyN-_qEyie5M"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "role",
+								"value": "SUPER_ADMIN",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Hello\",\r\n    \"lastName\":\"hello 2\",\r\n    \"username\":\"admin@gmail.com\",\r\n    \"phone\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/account/admin"
+					},
+					"response": []
+				},
+				{
+					"name": "update teacher account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyMTJAbWFpbC5ydSIsImlhdCI6MTczNzkxNTAyMSwiaXNzIjoiam9pbmVkLXRhYmxlLWluaGVyaXRhbmNlIiwiZXhwIjoxNzM3OTY1MDIxfQ.4BZDyxMnkGv92gzZ9hQx31HJphrt40e8xnrZRV6B2ew"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "role",
+								"value": "TEACHER",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Hello\",\r\n    \"lastName\":\"hello 2\",\r\n    \"username\":\"admin@gmail.com\",\r\n    \"phone\":\"123456\",\r\n    \"groups\":[\"g1\",\"g2\",\"g3\",\"g4\"],\r\n    \"specialization\":\"Chemistry\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/account/teacher"
+					},
+					"response": []
+				},
+				{
+					"name": "update teacher account Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyMTJAbWFpbC5ydSIsImlhdCI6MTczNzkxNTAyMSwiaXNzIjoiam9pbmVkLXRhYmxlLWluaGVyaXRhbmNlIiwiZXhwIjoxNzM3OTY1MDIxfQ.4BZDyxMnkGv92gzZ9hQx31HJphrt40e8xnrZRV6B2ew"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "role",
+								"value": "TEACHER",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Hello\",\r\n    \"lastName\":\"hello 2\",\r\n    \"username\":\"admin@gmail.com\",\r\n    \"phone\":\"123456\",\r\n    \"groups\":[\"g1\",\"g2\",\"g3\",\"g4\"],\r\n    \"specialization\":\"Chemistry\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/account/teacher"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "teacher",
+			"item": [
+				{
+					"name": "add teacher",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3Mzc5MTMyNjcsImlzcyI6ImpvaW5lZC10YWJsZS1pbmhlcml0YW5jZSIsImV4cCI6MTczNzk2MzI2N30.mFJYi8IT5db5Sd8YZv3o2fehSJ6niaemyN-_qEyie5M"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "role",
+								"value": "SUPER_ADMIN",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"teacher12@mail.ru\",\r\n    \"firstName\":\"john\",\r\n    \"specialization\":\"Chemistry\",\r\n    \"lastName\":\"tomas\",\r\n    \"groups\":[\"g1\",\"g2\"],\r\n    \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/teacher"
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3Mzg2NzYwOTEsImlzcyI6ImpvaW5lZC10YWJsZS1pbmhlcml0YW5jZSIsImV4cCI6MTczODcyNjA5MX0.VFAfHF4Sw0O8fvRHpSAWKFo8H6gpA7sZHrIChXn-FTA"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "role",
+								"value": "SUPER_ADMIN",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8080/api/teacher"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "add student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3Mzc5MTMyNjcsImlzcyI6ImpvaW5lZC10YWJsZS1pbmhlcml0YW5jZSIsImV4cCI6MTczNzk2MzI2N30.mFJYi8IT5db5Sd8YZv3o2fehSJ6niaemyN-_qEyie5M"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "role",
+								"value": "SUPER_ADMIN",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"nicky\",\r\n    \"lastName\":\"tomsan\",\r\n    \"username\":\"student12@mail.com\",\r\n    \"course\":\"biology\",\r\n    \"mainSubject\":\"G1\",\r\n    \"subjects\":[\"G1\",\"G2\",\"G3\"],\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/student"
+					},
+					"response": []
+				},
+				{
+					"name": "get all Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3Mzg2NzYwOTEsImlzcyI6ImpvaW5lZC10YWJsZS1pbmhlcml0YW5jZSIsImV4cCI6MTczODcyNjA5MX0.VFAfHF4Sw0O8fvRHpSAWKFo8H6gpA7sZHrIChXn-FTA"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "role",
+								"value": "SUPER_ADMIN",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8080/api/student"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
