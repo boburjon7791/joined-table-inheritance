@@ -119,6 +119,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>joined-table-inheritance</finalName>
 	</build>
 
 </project>
