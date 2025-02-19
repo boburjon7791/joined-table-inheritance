@@ -1,11 +1,11 @@
 spring:
   datasource:
-    url: jdbc:postgresql://yamanote.proxy.rlwy.net:37941/railway
+    url: jdbc:postgresql://turntable.proxy.rlwy.net:11498/railway
     username: postgres
-    password: DqQYlpmndFQdWfHpFsADEOTCQBklsTKj
+    password: HtFJSlTjMOZTHGLDJpXHFuVYlXeRfZGw
     driver-class-name: org.postgresql.Driver
   liquibase:
-    enabled: true
+    enabled: false
   jpa:
     hibernate:
       ddl-auto: update
