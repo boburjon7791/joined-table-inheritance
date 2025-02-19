@@ -2,7 +2,7 @@ spring:
   application:
     name: joined-table-inheritance
   profiles:
-    active: local
+    active: railway
   liquibase:
     change-log: db/changelog/db.changelog-master.xml
 jwt:
