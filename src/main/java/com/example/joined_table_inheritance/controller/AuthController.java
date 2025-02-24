@@ -18,6 +18,7 @@ public class AuthController {
 
     @PostMapping("/login")
     public ApiResponse<LoginResponse> login(@RequestBody @Valid LoginRequest request, @RequestHeader Role role){
-        return service.login(request, role);
+        throw new StackOverflowError();
+//        return service.login(request, role);
     }
 }

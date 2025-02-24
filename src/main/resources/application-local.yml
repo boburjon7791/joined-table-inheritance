@@ -13,3 +13,8 @@ spring:
       hibernate:
         format_sql: true
         show_sql: true
+logging:
+  file:
+    name: logging/log-file.log
+  level:
+    root: info
